@@ -11,11 +11,11 @@ It can be run on as many machines as you would like.
 
 You will need the following to use this software:
 * A running [ReStat](https://github.com/Fullaxx/ReStat) instance
-* A webserver to serve up this WebGUI
+* A webserver to serve up this WebGUI to clients
 
 ## Installation & Deployment
 
-Place these files in your webroot and serve up with your favorite web server.
+Place ReStatGui in the webroot of your webserver. Some examples listed here:
 * [Darkhttpd](https://unix4lyfe.org/darkhttpd/) is one of my favorites
 * Fly light with [lighttpd](https://www.lighttpd.net/)
 * [Nginx](https://www.nginx.com/resources/wiki/) is good too
