@@ -7,6 +7,12 @@ and includes a web interface to display the information in real time.
 The goal is to collect and monitor system status and be as lightweight as possible.
 It can be run on as many machines as you would like.
 
+## Prerequisites
+
+You will need the following to use this software:
+* A running [ReStat](https://github.com/Fullaxx/ReStat) instance
+* A webserver to serve up this WebGUI
+
 ## Installation & Deployment
 
 Place these files in your webroot and serve up with your favorite web server.
