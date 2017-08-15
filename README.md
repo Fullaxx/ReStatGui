@@ -45,3 +45,8 @@ edit js/config.js and set restathost and restatport to your running restat_uhd s
     ├── jquery.min.js
     └── restat.js
 ```
+
+## Enjoy ReStatGui!
+
+- Brett Kuskie, 2017
+- [ReStatGui contributors](CONTRIBUTORS.md)
