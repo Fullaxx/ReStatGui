@@ -41,7 +41,7 @@ setInterval(function() {
 $.get("http://d8cc.dspi.org/rest/mem/test", function(result){
 	$.each(result, function(i, field){
 		console.log(field);
-		$('.mem').append(field.memdata);
+		$('.memory').append(field.memdata);
 	});
 });
 
@@ -51,7 +51,7 @@ setInterval(function() {
     $.get("http://d8cc.dspi.org/rest/mem/test", function(result){
     	$.each(result, function(i, field){
     		console.log(field);
-    		$('.mem').text(field.memdata);
+    		$('.memory').text(field.memdata);
     	});
     });
 }, 5000);
