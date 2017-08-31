@@ -1,0 +1,82 @@
+html {
+  position: relative;
+  min-height: 100%;
+  width: 100%;
+}
+
+body {
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+.header {
+    margin-bottom: 85px;
+    margin-top: 38px;
+}
+
+.fa-ellipsis-v {
+    color: #FF3B3F;
+}
+
+.fa-ellipsis-h {
+    color: #CAEBF2;
+}
+
+.slogan {
+    text-align: right;
+}
+
+hr {
+    width: 72%;
+    color: #EFEFEF;
+}
+
+.grid-content {
+    margin: 0px;
+}
+
+.key {
+    padding: 15px;
+}
+
+.item {
+    padding: 15px;
+}
+
+.footer {
+    padding: 0px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+}
+
+.footer-left {
+    padding: 0px;
+    margin: 0px;
+    background-color: #FF3B3F;
+    position: absolute;
+    height: 60px;
+    left: 100px;
+    border-top-left-radius: 50px;
+}
+
+.footer-text {
+    color: #607d8b;
+    font-size: 14px;
+    padding-left: 129px;
+    line-height: 45px;
+}
+
+.footer-right {
+    padding: 0px;
+    margin: 0px;
+    background-color: #CAEBF2;
+    height: 60px;
+    position: absolute;
+    left: 236px;
+    width: 379px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
