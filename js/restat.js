@@ -1,6 +1,4 @@
-
 $(document).ready( function() {
-
     function getCpu() {
         $.get("http://d8cc.dspi.org/rest/cpu/test", (response) => {
             $.each(response, function(i, field) {
