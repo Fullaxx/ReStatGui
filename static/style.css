@@ -44,6 +44,7 @@ hr {
 }
 
 .footer {
+    margin-top: 5px;
     padding: 0px;
     position: absolute;
     bottom: 0;
@@ -51,32 +52,30 @@ hr {
     height: 60px;
 }
 
-.footer-left {
+.spacer {
+    padding: 0px;
+    margin: 0px;
+    background-color: white;
+    height: 50px;
+    width: 100%;
+    border-bottom-left-radius: 350%;
+    border-bottom-right-radius: 350%;
+    position: absolute;
+    bottom: 31px;
+}
+
+.red {
     padding: 0px;
     margin: 0px;
     background-color: #FF3B3F;
-    position: absolute;
-    height: 60px;
-    left: 246px;
-    border-top-left-radius: 50px;
+    height: 15px;
+    width: 100%;
 }
 
-.footer-text {
-    color: #607d8b;
-    font-size: 14px;
-    padding-left: 129px;
-    line-height: 45px;
-}
-
-.footer-right {
+.blue {
     padding: 0px;
     margin: 0px;
     background-color: #CAEBF2;
-    height: 60px;
-    position: absolute;
-    left: 335px;
-    width: 379px;
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 50px;
-    border-top-right-radius: 50px;
+    height: 55px;
+    width: 100%;
 }
