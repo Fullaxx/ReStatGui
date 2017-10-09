@@ -1,12 +1,21 @@
 $(document).ready( function() {
     function getCpu() {
-        $.get("http://d8cc.dspi.org/rest/cpu/test", (response) => {
-            $.each(response, function(i, field) {
-                console.log(field)
-                $('.cpu').text(field.cpudata + "%")
-            })
-        })
+        $.ajax({
+            url : "http://d8cc.dspi.org/rest/cpu/test",
+            success : (response) => {
+                $.each(response, function(i, field) {
+                    console.log(field)
+                    $('.cpu').text(field.cpudata + "%")
+                });
+            }
+        });
     }
+
+    $("button").click(function(){
+        $.ajax({url: "demo_test.txt", success: function(result){
+            $("#div1").html(result);
+        }});
+    });
 
     function setCpuInterval() {
         setInterval(function() {
