@@ -11,82 +11,60 @@ $(document).ready( function() {
         });
     }
 
-    $("button").click(function(){
-        $.ajax({url: "demo_test.txt", success: function(result){
-            $("#div1").html(result);
-        }});
-    });
-
     function setCpuInterval() {
-        setInterval(function() {
-            $.get("http://d8cc.dspi.org/rest/cpu/test", (response) => {
-            	$.each(response, function(i, field) {
-            		console.log(field);
-            		$('.cpu').text(field.cpudata + "%");
-            	});
-            });
-        }, 11000);
+        getCpu()
+        setInterval(function() { getCpu() }, 11000);
     }
 
     function getUptime() {
-        $.get("http://d8cc.dspi.org/rest/uptimestr/test", (response) => {
-    	   $.each(response, function(i, field) {
-        		console.log(field);
-        		$('.uptime').text(field.uptimedata);
-        	});
+        $.ajax({
+            url: "http://d8cc.dspi.org/rest/uptimestr/test",
+            success: (response) => {
+                $.each(response, function(i, field) {
+                    console.log(field);
+                    $('.uptime').text(field.uptimedata)
+                });
+            }
         });
     }
 
     function setUptimeInterval() {
-        setInterval(function() {
-        // method to be executed;
-        $.get("http://d8cc.dspi.org/rest/uptimestr/test", (response) => {
-        	$.each(response, function(i, field) {
-        		console.log(field);
-        		$('.uptime').text(field.uptimedata);
-            	});
-            });
-        }, 2000);
+        getUptime();
+        setInterval(function() { getUptime(); }, 2000);
     }
 
     function getMem() {
-        $.get("http://d8cc.dspi.org/rest/mem/test", (response) => {
-        	$.each(response, function(i, field) {
-        		console.log(field);
-        		$('.memory').append(field.memdata);
-        	});
+        $.ajax({
+            url: "http://d8cc.dspi.org/rest/mem/test",
+            success: (response) => {
+                $.each(response, function(i, field) {
+                    console.log(field);
+                    $('.memory').text(field.memdata);
+                });
+            }
         });
     }
 
     function setMemInterval() {
-        setInterval(function() {
-            $.get("http://d8cc.dspi.org/rest/mem/test", (response) => {
-            	$.each(response, function(i, field) {
-            		console.log(field);
-            		$('.memory').text(field.memdata);
-            	});
-            });
-        }, 5000);
+        getMem();
+        setInterval(function() { getMem() }, 5000);
     }
 
     function getNet() {
-        $.get("http://d8cc.dspi.org/rest/netstr/test", (response) => {
-        	$.each(response, function(i, field) {
-        		console.log(field);
-        		$('.net').append(field.netstrdata);
-        	});
+        $.ajax({
+            url: "http://d8cc.dspi.org/rest/netstr/test",
+            success: (response) => {
+                $.each(response, function(i, field) {
+                    console.log(field);
+                    $('.net').text(field.netstrdata);
+        	    });
+            }
         });
     }
 
     function setNetInterval() {
-        setInterval(function() {
-            $.get("http://d8cc.dspi.org/rest/netstr/test", (response) => {
-            	$.each(response, function(i, field) {
-            		console.log(field);
-            		$('.net').text(field.netstrdata);
-            	});
-            });
-        }, 15000);
+        getNet();
+        setInterval(function() { getNet(); }, 15000);
     }
 
     /*
@@ -111,15 +89,11 @@ $(document).ready( function() {
 
     */
     function Init() {
-        getCpu()
-        setCpuInterval()
-        getUptime()
-        setUptimeInterval()
-        getMem()
-        setMemInterval()
-        getNet()
-        setNetInterval()
+        setCpuInterval();
+        setUptimeInterval();
+        setMemInterval();
+        setNetInterval();
     }
 
-    Init()
+    Init();
 });
